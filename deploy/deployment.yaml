@@ -24,15 +24,3 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
-          livenessProbe:
-            initialDelaySeconds: 2
-            periodSeconds: 2
-            httpGet:
-              port: 80
-              path: /healthz/live
-          readinessProbe:
-            initialDelaySeconds: 2
-            periodSeconds: 2
-            httpGet:
-              port: 80
-              path: /healthz/ready
