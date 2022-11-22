@@ -4,6 +4,8 @@ metadata:
   labels:
     app: nginxhello
   name: single-default-backend-ingress
+  annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
