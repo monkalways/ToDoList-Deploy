@@ -5,13 +5,22 @@ metadata:
     app: nginxhello
   name: single-default-backend-ingress
   annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /
+      - path: /todo-list(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: nginxhello
+            port:
+              number: 80
+      - path: /(.*)
         pathType: Prefix
         backend:
           service:
