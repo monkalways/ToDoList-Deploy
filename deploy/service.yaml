@@ -6,7 +6,7 @@ metadata:
     app: nginxhello
   name: nginxhello
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - port: 80
     protocol: TCP
