@@ -13,17 +13,11 @@ spec:
   rules:
   - http:
       paths:
-      - path: /todo-list(/|$)(.*)
+      - path: /todo-list
         pathType: Prefix
         backend:
           service:
             name: nginxhello
             port:
               number: 80
-      - path: /(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: nginxhello
-            port:
-              number: 80
+      
