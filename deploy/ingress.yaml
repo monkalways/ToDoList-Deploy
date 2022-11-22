@@ -13,7 +13,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /todo-list(/|$)(.*)
+      - path: /(.*)
         pathType: Prefix
         backend:
           service:
