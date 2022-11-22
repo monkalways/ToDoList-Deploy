@@ -6,6 +6,7 @@ metadata:
     app: nginxhello
   name: nginxhello
 spec:
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP
