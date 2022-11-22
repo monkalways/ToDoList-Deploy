@@ -14,7 +14,7 @@ spec:
   - http:
       paths:
       - path: /todo-list
-        pathType: Prefix
+        pathType: Exact
         backend:
           service:
             name: nginxhello
