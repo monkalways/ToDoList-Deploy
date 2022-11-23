@@ -15,7 +15,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-        - image: docker.io/monkalways/todo-list:latest # {"$imagepolicy": "default:nginxhello"}
+        - image: docker.io/monkalways/todo-list:3 # {"$imagepolicy": "default:nginxhello"}
           name: nginxhello
           ports:
             - containerPort: 80
