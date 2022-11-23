@@ -15,7 +15,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-        - image: docker.io/monkalways/todo-list:1.0.6 # {"$imagepolicy": "default:nginxhello"}
+        - image: docker.io/monkalways/todo-list:1.0.7 # {"$imagepolicy": "default:nginxhello"}
           name: nginxhello
           ports:
             - containerPort: 80
@@ -25,7 +25,7 @@ spec:
                 fieldRef:
                   fieldPath: spec.nodeName
             - name: VERSION_NUMBER
-              value: !!int docker.io/monkalways/todo-list:1.0.6 # {"$imagepolicy": "default:nginxhello"}
+              value: !!int docker.io/monkalways/todo-list:1.0.7 # {"$imagepolicy": "default:nginxhello"}
           livenessProbe:
             initialDelaySeconds: 2
             periodSeconds: 2
