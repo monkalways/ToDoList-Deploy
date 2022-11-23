@@ -25,7 +25,7 @@ spec:
                 fieldRef:
                   fieldPath: spec.nodeName
             - name: VERSION_NUMBER
-              value: '5'
+              value: 5 # {"$imagepolicy": "default:nginxhello"}
           livenessProbe:
             initialDelaySeconds: 2
             periodSeconds: 2
